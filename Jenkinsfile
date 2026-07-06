@@ -33,6 +33,7 @@ pipeline {
             steps {
                 sh '''
                 aws ecs update-service \
+                --region ap-south-1 \
                 --cluster aws-devops-cluster \
                 --service aws-devops-service \
                 --force-new-deployment
